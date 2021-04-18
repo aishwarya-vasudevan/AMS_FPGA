@@ -1,4 +1,4 @@
-# DE0 - Cyclone IV
+# Introduction and Overview
 
 Write down all your expereinces with DE0 eval board.
 

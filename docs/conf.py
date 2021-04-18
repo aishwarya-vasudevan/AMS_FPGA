@@ -15,7 +15,6 @@
 # import os
 # import sys
 
-
 # -- Project information -----------------------------------------------------
 
 project = u'AMS-FPGA'
@@ -27,7 +26,6 @@ version = u'0.1'
 # The full version, including alpha/beta/rc tags
 release = u'Summer 2021'
 
-
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -38,15 +36,10 @@ release = u'Summer 2021'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
-    'sphinxcontrib.bibtex',
-    'recommonmark'
+    'sphinx.ext.autodoc', 'sphinx.ext.intersphinx', 'sphinx.ext.todo',
+    'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages', 'sphinxcontrib.bibtex', 'recommonmark',
+    'sphinx_markdown_tables'
 ]
 
 bibtex_bibfiles = ['ams_fpga.bib']
@@ -100,7 +93,24 @@ html_theme = 'sphinxdoc'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+# html_theme_options = {
+
+#    ‘logo_only’: True,
+#    ‘display_version’: True,
+#    ‘prev_next_buttons_location’: ‘bottom’,
+#    ‘style_external_links’: True,
+#
+#    # Toc options
+#    ‘collapse_navigation’: False,
+#    ‘sticky_navigation’: False,
+#    ‘navigation_depth’: 3,
+#    ‘includehidden’: True,
+#    ‘titles_only’: False
+#}
+
+# html_title = “AMS FPGA Design”
+# html_logo = “fig/logo.png”
+# html_favicon = “fig/favicon.ico”
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -131,23 +141,21 @@ html_theme = 'sphinxdoc'
 #
 # html_sidebars = {}
 
-
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'AMS-FPGAdoc'
-
 
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'letterpaper',
+    'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    # 'pointsize': '10pt',
+    'pointsize': '11pt',
 
     # Additional stuff for the LaTeX preamble.
     #
@@ -155,7 +163,7 @@ latex_elements = {
 
     # Latex figure (float) alignment
     #
-    # 'figure_align': 'htbp',
+    'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -166,16 +174,11 @@ latex_documents = [
      u'A. Vasudevan, A. Venkatachalam, M. Meiners', 'manual'),
 ]
 
-
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'AMS-FPGA', u'AMS-FPGA Documentation',
-     [author], 1)
-]
-
+man_pages = [(master_doc, 'AMS-FPGA', u'AMS-FPGA Documentation', [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -183,7 +186,6 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'AMS-FPGA', u'AMS-FPGA Documentation',
-     author, 'AMS-FPGA', 'One line description of project.',
-     'Miscellaneous'),
+    (master_doc, 'AMS-FPGA', u'AMS-FPGA Documentation', author, 'AMS-FPGA',
+     'One line description of project.', 'Miscellaneous'),
 ]
